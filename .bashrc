@@ -79,7 +79,7 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    alias ls='ls --color=auto -lhF'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -89,7 +89,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -127,8 +127,10 @@ fi
 
 
 # OTHER STUFF ############################################################################################################################################
-source ~/myPrograms/myBuild/bin/thisroot.sh
+source ~/Research/PixLAr/ROOT/bin/thisroot.sh
 # base16-manager set material-darker
 # base16-manager set unikitty-dark
-neofetch
 eval $(thefuck --alias)
+
+EDITOR=vim
+export PAGER="most"
